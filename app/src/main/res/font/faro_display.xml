@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Faro display font family.
+  Display XL / L / M: EB Garamond — warm classical serif for large headings.
+  Title L / M and smaller: falls back to Hanken Grotesk (faro_ui font family).
+
+  To use via Google Fonts provider, ensure the app declares the
+  com.google.android.gms.fonts provider authority in AndroidManifest.xml.
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- EB Garamond Regular (400) -->
+    <font
+        android:font="@font/eb_garamond_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/eb_garamond_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <!-- EB Garamond Medium (500) -->
+    <font
+        android:font="@font/eb_garamond_medium"
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        app:font="@font/eb_garamond_medium"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
+    <!-- EB Garamond SemiBold (600) -->
+    <font
+        android:font="@font/eb_garamond_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        app:font="@font/eb_garamond_semibold"
+        app:fontStyle="normal"
+        app:fontWeight="600" />
+
+    <!-- EB Garamond Bold (700) -->
+    <font
+        android:font="@font/eb_garamond_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/eb_garamond_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+</font-family>

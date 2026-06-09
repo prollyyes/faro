@@ -3,127 +3,127 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Material3 color variables -->
-    <color name="fx_mobile_primary">@color/photonInk20</color>
-    <color name="fx_mobile_on_primary">@color/photonLightGrey05</color>
-    <color name="fx_mobile_primary_container">@color/photonViolet05</color>
-    <color name="fx_mobile_on_primary_container">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_primary_inverse">@color/photonViolet20</color>
-    <color name="fx_mobile_secondary">@color/photonDarkGrey05</color>
-    <color name="fx_mobile_on_secondary">@color/photonLightGrey05</color>
-    <color name="fx_mobile_secondary_container">#FFE6E0F5</color>
-    <color name="fx_mobile_on_secondary_container">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_tertiary">@color/photonViolet70</color>
-    <color name="fx_mobile_on_tertiary">@color/photonLightGrey05</color>
-    <color name="fx_mobile_tertiary_container">@color/photonPink05</color>
-    <color name="fx_mobile_on_tertiary_container">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_background">@color/photonLightGrey10</color>
-    <color name="fx_mobile_on_background">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_surface">@color/photonLightGrey10</color>
-    <color name="fx_mobile_on_surface">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_surface_variant">@color/photonLightGrey30</color>
-    <color name="fx_mobile_on_surface_variant">@color/photonDarkGrey05</color>
-    <color name="fx_mobile_surface_inverse">@color/photonDarkGrey60</color>
-    <color name="fx_mobile_on_surface_inverse">@color/photonLightGrey05</color>
-    <color name="fx_mobile_error">@color/photonRed70</color>
-    <color name="fx_mobile_on_error">@color/photonLightGrey05</color>
-    <color name="fx_mobile_error_container">@color/photonRed05</color>
-    <color name="fx_mobile_on_error_container">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_outline">@color/photonLightGrey90</color>
-    <color name="fx_mobile_outline_variant">@color/photonLightGrey30</color>
-    <color name="fx_mobile_surface_bright">@color/photonWhite</color>
-    <color name="fx_mobile_surface_dim">@color/photonLightGrey30</color>
-    <color name="fx_mobile_surface_container">@color/photonLightGrey10</color>
-    <color name="fx_mobile_surface_container_high">@color/photonLightGrey20</color>
-    <color name="fx_mobile_surface_container_highest">@color/photonLightGrey30</color>
-    <color name="fx_mobile_surface_container_low">@color/photonLightGrey05</color>
-    <color name="fx_mobile_surface_container_lowest">@color/photonWhite</color>
-    <color name="fx_mobile_primary_fixed_dim">@color/photonViolet05</color>
-    <color name="fx_mobile_on_primary_fixed_variant">@color/photonLightGrey05</color>
-    <color name="fx_mobile_secondary_fixed">#FFE6E0F5</color>
-    <color name="fx_mobile_secondary_fixed_dim">#FFE6E0F5</color>
-    <color name="fx_mobile_on_secondary_fixed">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_on_secondary_fixed_variant">@color/photonLightGrey05</color>
-    <color name="fx_mobile_tertiary_fixed">@color/photonPink05</color>
-    <color name="fx_mobile_tertiary_fixed_dim">@color/photonPink05</color>
-    <color name="fx_mobile_on_tertiary_fixed">@color/photonDarkGrey90</color>
-    <color name="fx_mobile_on_tertiary_fixed_variant">@color/photonLightGrey05</color>
-    <color name="fx_mobile_splashscreen_background">#FCF3EE</color>
+    <!-- Material3 color variables — remapped to Faro design tokens -->
+    <color name="fx_mobile_primary">@color/faro_azure_500</color>
+    <color name="fx_mobile_on_primary">#FFFFFFFF</color>
+    <color name="fx_mobile_primary_container">@color/faro_azure_container_light</color>
+    <color name="fx_mobile_on_primary_container">@color/faro_ink_900</color>
+    <color name="fx_mobile_primary_inverse">@color/faro_azure_dark_500</color>
+    <color name="fx_mobile_secondary">@color/faro_stone_600</color>
+    <color name="fx_mobile_on_secondary">#FFFFFFFF</color>
+    <color name="fx_mobile_secondary_container">@color/faro_sand_200</color>
+    <color name="fx_mobile_on_secondary_container">@color/faro_ink_900</color>
+    <color name="fx_mobile_tertiary">@color/faro_azure_600</color>
+    <color name="fx_mobile_on_tertiary">#FFFFFFFF</color>
+    <color name="fx_mobile_tertiary_container">@color/faro_azure_container_light</color>
+    <color name="fx_mobile_on_tertiary_container">@color/faro_ink_900</color>
+    <color name="fx_mobile_background">@color/faro_sand_50</color>
+    <color name="fx_mobile_on_background">@color/faro_ink_900</color>
+    <color name="fx_mobile_surface">@color/faro_sand_50</color>
+    <color name="fx_mobile_on_surface">@color/faro_ink_900</color>
+    <color name="fx_mobile_surface_variant">@color/faro_sand_200</color>
+    <color name="fx_mobile_on_surface_variant">@color/faro_stone_600</color>
+    <color name="fx_mobile_surface_inverse">@color/faro_ink_800</color>
+    <color name="fx_mobile_on_surface_inverse">@color/faro_sand_50</color>
+    <color name="fx_mobile_error">#FFB91C1C</color>
+    <color name="fx_mobile_on_error">#FFFFFFFF</color>
+    <color name="fx_mobile_error_container">#FFFFDAD6</color>
+    <color name="fx_mobile_on_error_container">#FF410002</color>
+    <color name="fx_mobile_outline">@color/faro_stone_400</color>
+    <color name="fx_mobile_outline_variant">@color/faro_sand_300</color>
+    <color name="fx_mobile_surface_bright">@color/faro_sand_50</color>
+    <color name="fx_mobile_surface_dim">@color/faro_sand_200</color>
+    <color name="fx_mobile_surface_container">@color/faro_sand_100</color>
+    <color name="fx_mobile_surface_container_high">@color/faro_sand_200</color>
+    <color name="fx_mobile_surface_container_highest">@color/faro_sand_300</color>
+    <color name="fx_mobile_surface_container_low">@color/faro_sand_100</color>
+    <color name="fx_mobile_surface_container_lowest">@color/faro_sand_50</color>
+    <color name="fx_mobile_primary_fixed_dim">@color/faro_azure_container_light</color>
+    <color name="fx_mobile_on_primary_fixed_variant">#FFFFFFFF</color>
+    <color name="fx_mobile_secondary_fixed">@color/faro_sand_200</color>
+    <color name="fx_mobile_secondary_fixed_dim">@color/faro_sand_200</color>
+    <color name="fx_mobile_on_secondary_fixed">@color/faro_ink_900</color>
+    <color name="fx_mobile_on_secondary_fixed_variant">#FFFFFFFF</color>
+    <color name="fx_mobile_tertiary_fixed">@color/faro_azure_container_light</color>
+    <color name="fx_mobile_tertiary_fixed_dim">@color/faro_azure_container_light</color>
+    <color name="fx_mobile_on_tertiary_fixed">@color/faro_ink_900</color>
+    <color name="fx_mobile_on_tertiary_fixed_variant">#FFFFFFFF</color>
+    <color name="fx_mobile_splashscreen_background">@color/faro_sand_50</color>
 
-    <!-- Design system color variables -->
+    <!-- Design system color variables — Faro palette -->
 
     <!-- Layers -->
     <!-- Card background, Menu background, Dialog, Banner -->
-    <color name="fx_mobile_layer_color_2">@color/photonWhite</color>
+    <color name="fx_mobile_layer_color_2">@color/faro_sand_100</color>
     <!-- Search -->
-    <color name="fx_mobile_layer_color_3">@color/photonLightGrey20</color>
-    <color name="fx_mobile_layer_color_scrim">@color/photonDarkGrey30A95</color>
+    <color name="fx_mobile_layer_color_3">@color/faro_sand_200</color>
+    <color name="fx_mobile_layer_color_scrim">@color/faro_scrim</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_start">@color/photonViolet70</color>
+    <color name="fx_mobile_layer_color_gradient_start">@color/faro_azure_600</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_end">@color/photonViolet60</color>
+    <color name="fx_mobile_layer_color_gradient_end">@color/faro_azure_500</color>
     <!-- Warning background -->
-    <color name="fx_mobile_layer_color_warning">@color/photonYellow20</color>
+    <color name="fx_mobile_layer_color_warning">#FFFEF0C5</color>
     <!-- Error background -->
-    <color name="fx_mobile_layer_color_critical">@color/photonRed10</color>
+    <color name="fx_mobile_layer_color_critical">#FFFFDAD6</color>
 
     <!-- Action -->
     <!-- Primary button, Snackbar, Floating action button, Chip selected -->
-    <color name="fx_mobile_action_color_primary">@color/photonInk20</color>
+    <color name="fx_mobile_action_color_primary">@color/faro_azure_500</color>
     <!-- Primary button in a disabled state-->
-    <color name="fx_mobile_action_color_primary_disabled">@color/photonInk20A20</color>
+    <color name="fx_mobile_action_color_primary_disabled">@color/faro_azure_tint</color>
     <!-- Secondary button -->
-    <color name="fx_mobile_action_color_secondary">@color/photonLightGrey30</color>
+    <color name="fx_mobile_action_color_secondary">@color/faro_sand_200</color>
 
     <!-- Text -->
     <!-- Primary text -->
-    <color name="fx_mobile_text_color_primary">@color/photonDarkGrey90</color>
+    <color name="fx_mobile_text_color_primary">@color/faro_ink_900</color>
     <!-- Secondary text -->
-    <color name="fx_mobile_text_color_secondary">@color/photonDarkGrey05</color>
+    <color name="fx_mobile_text_color_secondary">@color/faro_stone_600</color>
     <!-- Disabled text -->
-    <color name="fx_mobile_text_color_disabled">@color/photonDarkGrey90A40</color>
+    <color name="fx_mobile_text_color_disabled">@color/faro_stone_400</color>
     <!-- Warning text -->
-    <color name="fx_mobile_text_color_critical">@color/photonRed70</color>
+    <color name="fx_mobile_text_color_critical">#FFB91C1C</color>
     <!-- Warning text on Secondary button -->
-    <color name="fx_mobile_text_color_critical_button">@color/photonRed70</color>
+    <color name="fx_mobile_text_color_critical_button">#FFB91C1C</color>
     <!-- Small heading, Text link -->
-    <color name="fx_mobile_text_color_accent">@color/photonViolet70</color>
+    <color name="fx_mobile_text_color_accent">@color/faro_azure_500</color>
     <!-- Text Inverted/On Color -->
-    <color name="fx_mobile_text_color_oncolor_primary">@color/photonLightGrey05</color>
+    <color name="fx_mobile_text_color_oncolor_primary">#FFFFFFFF</color>
     <!-- Text Inverted/On Color -->
-    <color name="fx_mobile_text_color_oncolor_secondary">@color/photonLightGrey40</color>
+    <color name="fx_mobile_text_color_oncolor_secondary">@color/faro_sand_100</color>
     <!-- Action Primary text -->
-    <color name="fx_mobile_text_color_action_primary">@color/photonLightGrey05</color>
+    <color name="fx_mobile_text_color_action_primary">#FFFFFFFF</color>
     <!-- Action Primary disabled text -->
-    <color name="fx_mobile_text_color_action_primary_disabled">@color/photonDarkGrey90A50</color>
+    <color name="fx_mobile_text_color_action_primary_disabled">@color/faro_stone_500</color>
     <!-- Action Secondary text -->
-    <color name="fx_mobile_text_color_action_secondary">@color/photonDarkGrey90</color>
+    <color name="fx_mobile_text_color_action_secondary">@color/faro_ink_900</color>
 
     <!-- Icon -->
     <!-- Primary icon -->
-    <color name="fx_mobile_icon_color_primary">@color/photonDarkGrey90</color>
+    <color name="fx_mobile_icon_color_primary">@color/faro_ink_900</color>
     <!-- Secondary icon -->
-    <color name="fx_mobile_icon_color_secondary">@color/photonDarkGrey05</color>
+    <color name="fx_mobile_icon_color_secondary">@color/faro_stone_600</color>
     <!-- Disabled icon -->
-    <color name="fx_mobile_icon_color_disabled">@color/photonDarkGrey90A40</color>
+    <color name="fx_mobile_icon_color_disabled">@color/faro_stone_400</color>
     <!-- Icon inverted (on color) -->
-    <color name="fx_mobile_icon_color_oncolor">@color/photonLightGrey05</color>
+    <color name="fx_mobile_icon_color_oncolor">#FFFFFFFF</color>
     <!-- Information -->
-    <color name="fx_mobile_icon_color_information">@color/photonBlue30</color>
-    <color name="fx_mobile_icon_color_critical">@color/photonRed70</color>
+    <color name="fx_mobile_icon_color_information">@color/faro_azure_500</color>
+    <color name="fx_mobile_icon_color_critical">#FFB91C1C</color>
     <!-- Warning icon on Secondary button -->
-    <color name="fx_mobile_icon_color_critical_button">@color/photonRed70</color>
-    <color name="fx_mobile_icon_color_accent_violet">@color/photonViolet70</color>
-    <color name="fx_mobile_icon_color_accent_blue">@color/photonBlue60</color>
-    <color name="fx_mobile_icon_color_accent_pink">@color/photonPink60</color>
-    <color name="fx_mobile_icon_color_accent_green">@color/photonGreen60</color>
-    <color name="fx_mobile_icon_color_accent_yellow">@color/photonYellow60</color>
+    <color name="fx_mobile_icon_color_critical_button">#FFB91C1C</color>
+    <color name="fx_mobile_icon_color_accent_violet">@color/faro_azure_600</color>
+    <color name="fx_mobile_icon_color_accent_blue">@color/faro_azure_500</color>
+    <color name="fx_mobile_icon_color_accent_pink">@color/faro_terra_500</color>
+    <color name="fx_mobile_icon_color_accent_green">@color/faro_olive_500</color>
+    <color name="fx_mobile_icon_color_accent_yellow">@color/faro_terra_400</color>
     <!-- Action Secondary Icon -->
-    <color name="fx_mobile_icon_color_action_secondary">@color/photonDarkGrey90</color>
+    <color name="fx_mobile_icon_color_action_secondary">@color/faro_ink_900</color>
 
     <!-- Border -->
     <!-- Active tab (Nav), Selected tab, Active form -->
-    <color name="fx_mobile_border_color_accent">@color/photonInk20</color>
+    <color name="fx_mobile_border_color_accent">@color/faro_azure_500</color>
 
     <!-- Private theme color variables -->
 
@@ -223,29 +223,29 @@
     <color name="neutral_faded_private_theme">#1FFBFBFE</color>
     <color name="prompt_login_edit_text_cursor_color_private_theme">@color/photonViolet50</color>
 
-    <!-- Normal theme colors for light mode -->
-    <color name="accent_normal_theme">@color/photonInk20</color>
-    <color name="accent_high_contrast_normal_theme">@color/photonInk20</color>
-    <color name="neutral_normal_theme">@color/photonGrey30</color>
-    <color name="neutral_faded_normal_theme">@color/photonGrey20</color>
-    <color name="fill_link_from_clipboard_normal_theme">@color/photonInk20</color>
-    <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/photonViolet70</color>
-    <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/photonInk20</color>
-    <color name="search_suggestion_indicator_icon_color_normal_theme">@color/photonGreen70</color>
-    <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/photonBlue50</color>
+    <!-- Normal theme colors for light mode — Faro Azure Coast -->
+    <color name="accent_normal_theme">@color/faro_azure_500</color>
+    <color name="accent_high_contrast_normal_theme">@color/faro_azure_700</color>
+    <color name="neutral_normal_theme">@color/faro_sand_300</color>
+    <color name="neutral_faded_normal_theme">@color/faro_sand_200</color>
+    <color name="fill_link_from_clipboard_normal_theme">@color/faro_azure_500</color>
+    <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/faro_azure_600</color>
+    <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/faro_azure_500</color>
+    <color name="search_suggestion_indicator_icon_color_normal_theme">@color/faro_olive_500</color>
+    <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/faro_azure_500</color>
 
     <!-- Colors for privacy protection gradient -->
     <color name="privacy_gradient_start">#AE49EC</color>
     <color name="privacy_gradient_end">#210340</color>
 
-    <!-- Colors for Edge to Edge background  -->
-    <color name="homepage_edge_to_edge_gradient_start">#FFF7EAE8</color>
-    <color name="homepage_edge_to_edge_gradient_end">#FFF8F3F4</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">#FCF4F2</color>
-    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">#EFDCD6</color>
+    <!-- Colors for Edge to Edge background — Faro warm sand gradient -->
+    <color name="homepage_edge_to_edge_gradient_start">@color/faro_sand_50</color>
+    <color name="homepage_edge_to_edge_gradient_end">@color/faro_sand_100</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_active">@color/faro_sand_50</color>
+    <color name="homepage_tab_edge_to_edge_tab_strip_item_background_inactive">@color/faro_sand_200</color>
     <color name="homepage_tab_edge_to_edge_toolbar_background">#00000000</color>
     <color name="homepage_tab_edge_to_edge_toolbar_outline">#00000000</color>
-    <color name="homepage_tab_edge_to_edge_private_toolbar_outline">#564A75</color>
+    <color name="homepage_tab_edge_to_edge_private_toolbar_outline">@color/faro_azure_600</color>
 
 
     <!-- Bookmark buttons -->
@@ -276,11 +276,11 @@
     <color name="device_type_mobile_background">#D4C1FA</color>
     <color name="device_foreground">@color/photonInk80</color>
 
-    <!-- Launcher Icon colors -->
-    <color name="ic_launcher_background">#FDFDFD</color>
+    <!-- Launcher Icon colors — Faro sand -->
+    <color name="ic_launcher_background">@color/faro_sand_50</color>
 
     <!-- Private Browsing Mode Persistent Notification -->
-    <color name="pbm_notification_color">@color/photonViolet70</color>
+    <color name="pbm_notification_color">@color/faro_azure_600</color>
 
     <!-- Static Shortcut Background Color -->
     <color name="static_shortcut_background">#F5F5F5</color>

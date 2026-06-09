@@ -16,8 +16,9 @@
     <dimen name="library_item_height">56dp</dimen>
     <dimen name="library_item_icon_margin_horizontal">16dp</dimen>
     <dimen name="history_favicon_width_height">48dp</dimen>
-    <dimen name="tab_corner_radius">8dp</dimen>
-    <dimen name="material_dialog_corner_radius">28dp</dimen>"
+    <!-- Faro radii: chip=14dp, card=26dp, sheet=34dp, pill=999dp -->
+    <dimen name="tab_corner_radius">26dp</dimen>
+    <dimen name="material_dialog_corner_radius">26dp</dimen>
     <dimen name="preference_icon_drawable_size">24dp</dimen>
     <dimen name="search_bar_search_engine_icon_padding">12dp</dimen>
     <dimen name="search_engine_engine_icon_margin">12dp</dimen>
@@ -56,9 +57,9 @@
     <dimen name="tracking_protection_item_margin_end">16dp</dimen>
     <dimen name="tracking_protection_item_margin_bottom">18dp</dimen>
 
-    <!-- Bottom Sheet Fragment card -->
-    <dimen name="bottom_sheet_corner_radius">8dp</dimen>
-    <dimen name="bottom_sheet_corner_radius_28dp">28dp</dimen>
+    <!-- Bottom Sheet Fragment card — Faro sheet radius 34dp -->
+    <dimen name="bottom_sheet_corner_radius">34dp</dimen>
+    <dimen name="bottom_sheet_corner_radius_28dp">34dp</dimen>
     <dimen name="bottom_sheet_handle_height">4dp</dimen>
     <dimen name="bottom_sheet_handle_top_margin">8dp</dimen>
 
@@ -158,5 +159,31 @@
     <!-- Browser Menu -->
     <dimen name="browser_menu_max_width">640dp</dimen>
     <dimen name="browser_menu_padding">56dp</dimen>
+
+    <!-- Faro Design Tokens -->
+    <!-- Spacing — 4px base grid -->
+    <dimen name="faro_s1">4dp</dimen>
+    <dimen name="faro_s2">8dp</dimen>
+    <dimen name="faro_s3">12dp</dimen>
+    <dimen name="faro_s4">16dp</dimen>
+    <dimen name="faro_s5">20dp</dimen>
+    <dimen name="faro_s6">24dp</dimen>
+    <dimen name="faro_s8">32dp</dimen>
+    <dimen name="faro_s10">40dp</dimen>
+    <dimen name="faro_s14">56dp</dimen>
+
+    <!-- Radii — pill-centric system -->
+    <dimen name="faro_radius_chip">14dp</dimen>
+    <dimen name="faro_radius_card">26dp</dimen>
+    <dimen name="faro_radius_sheet">34dp</dimen>
+    <dimen name="faro_radius_pill">999dp</dimen>
+
+    <!-- Touch targets -->
+    <dimen name="faro_touch_min">48dp</dimen>
+    <dimen name="faro_touch_comfy">56dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="faro_toolbar_height">56dp</dimen>
+    <dimen name="faro_toolbar_horizontal_padding">14dp</dimen>
 
 </resources>

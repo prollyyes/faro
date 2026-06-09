@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Faro UI font family — Hanken Grotesk.
+  Humanist, friendly, highly legible. Used for all body / UI text.
+  Place eb_garamond_*.ttf and hanken_grotesk_*.ttf files in this directory.
+  Files can be downloaded from Google Fonts:
+    EB Garamond:    https://fonts.google.com/specimen/EB+Garamond
+    Hanken Grotesk: https://fonts.google.com/specimen/Hanken+Grotesk
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Hanken Grotesk Regular (400) -->
+    <font
+        android:font="@font/hanken_grotesk_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/hanken_grotesk_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <!-- Hanken Grotesk Medium (500) -->
+    <font
+        android:font="@font/hanken_grotesk_medium"
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        app:font="@font/hanken_grotesk_medium"
+        app:fontStyle="normal"
+        app:fontWeight="500" />
+
+    <!-- Hanken Grotesk SemiBold (600) -->
+    <font
+        android:font="@font/hanken_grotesk_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        app:font="@font/hanken_grotesk_semibold"
+        app:fontStyle="normal"
+        app:fontWeight="600" />
+
+    <!-- Hanken Grotesk Bold (700) -->
+    <font
+        android:font="@font/hanken_grotesk_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/hanken_grotesk_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+</font-family>

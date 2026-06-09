@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Faro Design System — Color Palette
+     Lighthouse for the open web. Warm, earthen, Mediterranean. -->
+<resources>
+    <!-- Neutrals — warm limestone & ink -->
+    <color name="faro_sand_50">#FBF7F0</color>
+    <color name="faro_sand_100">#F5EEE2</color>
+    <color name="faro_sand_200">#EBE0CF</color>
+    <color name="faro_sand_300">#DCCDB6</color>
+    <color name="faro_stone_400">#B6A892</color>
+    <color name="faro_stone_500">#8B7E6C</color>
+    <color name="faro_stone_600">#6B6052</color>
+    <color name="faro_ink_800">#3A332B</color>
+    <color name="faro_ink_900">#261F18</color>
+
+    <!-- Dark mode surface palette — Mediterranean night -->
+    <color name="faro_dark_bg">#131110</color>
+    <color name="faro_dark_surface">#1A1714</color>
+    <color name="faro_dark_surface_high">#222018</color>
+    <color name="faro_dark_surface_highest">#2A2520</color>
+    <color name="faro_dark_text">#F4EDE2</color>
+    <color name="faro_dark_text_soft">#C3B6A4</color>
+    <color name="faro_dark_text_faint">#9A8E7E</color>
+
+    <!-- Azure Coast — default accent (sea blue) -->
+    <color name="faro_azure_300">#7FC9E3</color>
+    <color name="faro_azure_400">#3FA7CE</color>
+    <color name="faro_azure_500">#1B86B8</color>
+    <color name="faro_azure_600">#15709C</color>
+    <color name="faro_azure_700">#0F5878</color>
+    <color name="faro_azure_tint">#241B86B8</color>   <!-- accent at 14% -->
+    <color name="faro_azure_dark_500">#4FB4DC</color>  <!-- brighter for dark mode -->
+    <color name="faro_azure_container_light">#D4EEF8</color>
+    <color name="faro_azure_container_dark">#0E2A38</color>
+
+    <!-- Terracotta — warm clay -->
+    <color name="faro_terra_400">#D9794F</color>
+    <color name="faro_terra_500">#C25E37</color>
+    <color name="faro_terra_600">#A24A29</color>
+
+    <!-- Olive Grove — sage green -->
+    <color name="faro_olive_400">#8B9D5C</color>
+    <color name="faro_olive_500">#6E8047</color>
+    <color name="faro_olive_600">#586838</color>
+
+    <!-- Glass hairline (10 % warm ink) -->
+    <color name="faro_hairline">#1A261F18</color>
+    <!-- Glass sheen highlight (60 % white) -->
+    <color name="faro_glass_sheen">#99FFFFFF</color>
+    <!-- Scrim (28 % warm dark) -->
+    <color name="faro_scrim">#47140C08</color>
+</resources>
