@@ -1,0 +1,63 @@
+name: Faro Debug Build
+
+on:
+  push:
+    branches:
+      - faro-design
+
+jobs:
+  build:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: 'true'
+          fetch-depth: 0
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: Install Android SDK pieces
+        run: ./automation/iceraven/install-sdk.sh
+
+      - name: Patch android-components plugin paths
+        run: |
+          for f in android-components/plugins/*/settings.gradle; do
+            sed -i 's|from(files("\.\./\.\./\.\./\.\./\.\./gradle/libs.versions.toml"))|from(files("../../../gradle/libs.versions.toml"))|g' "$f"
+          done
+
+      - name: Create mobile/android/version.txt
+        run: mkdir -p mobile/android && cp version.txt mobile/android/version.txt
+
+      - name: Create version name
+        run: echo "VERSION_NAME=$(git describe --tags HEAD 2>/dev/null || echo faro-dev)" >> $GITHUB_ENV
+
+      - name: Build forkDebug APK
+        env:
+          GRADLE_OPTS: -Dorg.gradle.jvmargs="-XX:MaxMetaspaceSize=4g -Xms1g -Xmx7g"
+        run: ./gradlew app:assembleForkDebug -PversionName=${{ env.VERSION_NAME }} --no-daemon --stacktrace
+
+      - name: List outputs
+        run: find . -name "*.apk" -path "*/forkDebug/*" | sort
+
+      - name: Upload arm64 debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: faro-${{ env.VERSION_NAME }}-arm64-debug
+          path: "**/outputs/apk/forkDebug/*arm64*.apk"
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Upload armeabi debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: faro-${{ env.VERSION_NAME }}-armeabi-debug
+          path: "**/outputs/apk/forkDebug/*armeabi*.apk"
+          if-no-files-found: warn
+          retention-days: 7
