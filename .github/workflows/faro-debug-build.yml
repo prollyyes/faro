@@ -26,25 +26,19 @@ jobs:
       - name: Install Android SDK pieces
         run: ./automation/iceraven/install-sdk.sh
 
-      - name: Patch android-components plugin paths
-        run: |
-          for f in android-components/plugins/*/settings.gradle; do
-            sed -i 's|from(files("\.\./\.\./\.\./\.\./\.\./gradle/libs.versions.toml"))|from(files("../../../gradle/libs.versions.toml"))|g' "$f"
-          done
-
-      - name: Create mobile/android/version.txt
-        run: mkdir -p mobile/android && cp version.txt mobile/android/version.txt
-
       - name: Create version name
         run: echo "VERSION_NAME=$(git describe --tags HEAD 2>/dev/null || echo faro-dev)" >> $GITHUB_ENV
+
+      - name: Patch on the fly (same as release CI)
+        run: ./automation/iceraven/patch_android_components.sh
 
       - name: Build forkDebug APK
         env:
           GRADLE_OPTS: -Dorg.gradle.jvmargs="-XX:MaxMetaspaceSize=4g -Xms1g -Xmx7g"
         run: ./gradlew app:assembleForkDebug -PversionName=${{ env.VERSION_NAME }} --no-daemon --stacktrace
 
-      - name: List outputs
-        run: find . -name "*.apk" -path "*/forkDebug/*" | sort
+      - name: List APK outputs
+        run: find . -name "*.apk" | sort
 
       - name: Upload arm64 debug APK
         uses: actions/upload-artifact@v4
