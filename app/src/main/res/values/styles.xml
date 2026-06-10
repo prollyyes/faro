@@ -146,9 +146,10 @@
         <item name="neutral">@color/neutral_normal_theme</item>
         <item name="neutralFaded">@color/neutral_faded_normal_theme</item>
         <item name="accentUsedOnDarkBackground">@color/fx_mobile_text_color_accent</item>
-        <item name="toolbarStartGradient">@color/fx_mobile_surface</item>
-        <item name="toolbarCenterGradient">@color/fx_mobile_surface</item>
-        <item name="toolbarEndGradient">@color/fx_mobile_surface</item>
+        <!-- Faro toolbar: Azure Coast gradient, top azure → bottom sand -->
+        <item name="toolbarStartGradient">@color/faro_azure_container_light</item>
+        <item name="toolbarCenterGradient">@color/faro_sand_100</item>
+        <item name="toolbarEndGradient">@color/faro_sand_50</item>
         <item name="fillLinkFromClipboard">@color/fill_link_from_clipboard_normal_theme</item>
         <item name="addOnPrivateBrowsingExteriorCircleBackground">@color/add_on_private_browsing_exterior_circle_background_normal_theme</item>
         <item name="mozacPromptLoginEditTextCursorColor">@color/prompt_login_edit_text_cursor_color_normal_theme</item>

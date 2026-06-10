@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.home.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.layout.Box
@@ -16,6 +17,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -119,9 +122,19 @@ internal fun Homepage(
     val browsingModeChanged = interactor::onPrivateModeButtonClicked
     var showSportsCountrySelector by remember { mutableStateOf(false) }
 
+    // Faro Azure Coast wallpaper gradient — coastal sky to deep sea
+    val faroWallpaper = Brush.verticalGradient(
+        colorStops = arrayOf(
+            0.00f to Color(0xFFDCEFF6),
+            0.42f to Color(0xFFBFE0EC),
+            1.00f to Color(0xFF7FB9CE),
+        ),
+    )
+
     BoxWithConstraints(
         modifier = modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .background(faroWallpaper),
     ) {
         Column(
             modifier = Modifier

@@ -51,16 +51,12 @@ import org.mozilla.fenix.tabstray.browser.compose.TabItemInteractionState
 import org.mozilla.fenix.tabstray.data.TabsTrayItem
 import mozilla.components.ui.icons.R as iconsR
 
-// Rounded corner shape used by all tab items
-val TabContentCardShape = RoundedCornerShape(16.dp)
+// Faro card radius: 26dp (pill-centric design system)
+val TabContentCardShape = RoundedCornerShape(26.dp)
 
-// The corner radius of a tab card's top outer edge
-val TAB_CARD_TOP_CORNER_RADIUS = 4.dp
+val TAB_CARD_TOP_CORNER_RADIUS = 26.dp
+val TAB_CARD_BOTTOM_CORNER_RADIUS = 26.dp
 
-// The corner radius of a tab card's bottom outer edge
-val TAB_CARD_BOTTOM_CORNER_RADIUS = 12.dp
-
-// Rounded shape used for tab thumbnails
 val ThumbnailShape = RoundedCornerShape(
     topStart = TAB_CARD_TOP_CORNER_RADIUS,
     topEnd = TAB_CARD_TOP_CORNER_RADIUS,
