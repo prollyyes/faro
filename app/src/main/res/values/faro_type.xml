@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Faro Typography System
-  Display XL/L/M: EB Garamond (warm classical serif — user-confirmed)
-  Title L/M, Body, Label, Micro: Hanken Grotesk (humanist sans)
+  Faro Typography System — type scale tokens.
+  Typefaces: EB Garamond (Display) · Hanken Grotesk (UI/body).
+  Custom font files can be added to res/font/ via scripts/download_fonts.sh.
+  Until then, styles fall back to system serif / sans-serif.
 
-  Font files required in res/font/:
-    eb_garamond_regular.ttf, eb_garamond_medium.ttf,
-    eb_garamond_semibold.ttf, eb_garamond_bold.ttf
-    hanken_grotesk_regular.ttf, hanken_grotesk_medium.ttf,
-    hanken_grotesk_semibold.ttf, hanken_grotesk_bold.ttf
-  Download from Google Fonts (EB Garamond, Hanken Grotesk).
+  Required intermediate ancestor stubs — aapt2 dot-notation hierarchy.
 -->
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Type scale (sp) -->
     <dimen name="faro_t_display_xl">56sp</dimen>
     <dimen name="faro_t_display_l">40sp</dimen>
@@ -23,70 +19,62 @@
     <dimen name="faro_t_label">13sp</dimen>
     <dimen name="faro_t_micro">11sp</dimen>
 
-    <!-- TextAppearance styles — Display sizes use EB Garamond (serif).
-         Title and smaller use Hanken Grotesk (humanist sans). -->
+    <!-- Ancestor stubs required by aapt2 -->
+    <style name="Faro" />
+    <style name="Faro.TextAppearance" />
+    <style name="Faro.TextAppearance.Display" />
+    <style name="Faro.TextAppearance.Title" />
+    <style name="Faro.TextAppearance.Body" />
 
+    <!-- Display — EB Garamond (serif fallback until font files present) -->
     <style name="Faro.TextAppearance.Display.XL">
-        <item name="android:fontFamily">@font/faro_display</item>
+        <item name="android:fontFamily">serif</item>
         <item name="android:textSize">@dimen/faro_t_display_xl</item>
-        <item name="android:fontWeight">600</item>
         <item name="android:letterSpacing">-0.02</item>
-        <item name="android:lineHeight" tools:targetApi="28">64sp</item>
     </style>
 
     <style name="Faro.TextAppearance.Display.L">
-        <item name="android:fontFamily">@font/faro_display</item>
+        <item name="android:fontFamily">serif</item>
         <item name="android:textSize">@dimen/faro_t_display_l</item>
-        <item name="android:fontWeight">600</item>
         <item name="android:letterSpacing">-0.015</item>
-        <item name="android:lineHeight" tools:targetApi="28">48sp</item>
     </style>
 
     <style name="Faro.TextAppearance.Display.M">
-        <item name="android:fontFamily">@font/faro_display</item>
+        <item name="android:fontFamily">serif</item>
         <item name="android:textSize">@dimen/faro_t_display_m</item>
-        <item name="android:fontWeight">600</item>
         <item name="android:letterSpacing">-0.01</item>
-        <item name="android:lineHeight" tools:targetApi="28">36sp</item>
     </style>
 
+    <!-- Title / Body — Hanken Grotesk (sans-serif fallback) -->
     <style name="Faro.TextAppearance.Title.L">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_title_l</item>
-        <item name="android:fontWeight">600</item>
         <item name="android:letterSpacing">-0.005</item>
     </style>
 
     <style name="Faro.TextAppearance.Title.M">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_title_m</item>
-        <item name="android:fontWeight">600</item>
     </style>
 
     <style name="Faro.TextAppearance.Body.L">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_body_l</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:lineHeight" tools:targetApi="28">26sp</item>
     </style>
 
     <style name="Faro.TextAppearance.Body.M">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_body_m</item>
-        <item name="android:fontWeight">400</item>
-        <item name="android:lineHeight" tools:targetApi="28">22sp</item>
     </style>
 
     <style name="Faro.TextAppearance.Label">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_label</item>
-        <item name="android:fontWeight">500</item>
     </style>
 
     <style name="Faro.TextAppearance.Micro">
-        <item name="android:fontFamily">@font/faro_ui</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">@dimen/faro_t_micro</item>
-        <item name="android:fontWeight">500</item>
         <item name="android:letterSpacing">0.04</item>
     </style>
 </resources>

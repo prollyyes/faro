@@ -12,9 +12,7 @@
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="27">default</item>
     </style>
 
-    <!-- Faro NormalTheme — Hanken Grotesk as the base UI typeface -->
     <style name="NormalThemeBase" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:fontFamily">@font/faro_ui</item>
         <item name="preferenceTheme">@style/PreferenceTheme</item>
         <item name="materialTimePickerTheme">@style/Normal.MaterialTimePicker</item>
         <item name="materialCalendarTheme">@style/MaterialCalendar</item>
