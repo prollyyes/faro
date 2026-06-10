@@ -1,0 +1,353 @@
+--- a/components/compose/base/src/main/java/mozilla/components/compose/base/theme/AcornColors.kt
++++ b/components/compose/base/src/main/java/mozilla/components/compose/base/theme/AcornColors.kt
+@@ -283,66 +283,170 @@
+         onWarningContainer = onWarningContainer,
+         surfaceDimVariant = surfaceDimVariant,
+     )
++}
++
++// ── Faro Design System — Mediterranean palette ───────────────────────────────
++// Light: warm sand (#FBF7F0) · ink (#261F18) · Azure Coast (#1B86B8)
++// Dark:  Mediterranean night (#131110) · warm cream (#F4EDE2) · azure (#4FB4DC)
++private object FaroColors {
++    // Neutrals — light
++    val sand50  = Color(0xFFFBF7F0)
++    val sand100 = Color(0xFFF5EEE2)
++    val sand200 = Color(0xFFEBE0CF)
++    val sand300 = Color(0xFFDCCDB6)
++    val stone400 = Color(0xFFB6A892)
++    val stone500 = Color(0xFF8B7E6C)
++    val stone600 = Color(0xFF6B6052)
++    val ink800  = Color(0xFF3A332B)
++    val ink900  = Color(0xFF261F18)
++
++    // Neutrals — dark (Mediterranean night)
++    val darkBg           = Color(0xFF131110)
++    val darkSurface      = Color(0xFF1A1714)
++    val darkSurfaceHigh  = Color(0xFF222018)
++    val darkSurfaceHighest = Color(0xFF2A2520)
++    val darkText         = Color(0xFFF4EDE2)
++    val darkTextSoft     = Color(0xFFC3B6A4)
++    val darkTextFaint    = Color(0xFF9A8E7E)
++
++    // Azure Coast accent
++    val azure300 = Color(0xFF7FC9E3)
++    val azure500 = Color(0xFF1B86B8)
++    val azure600 = Color(0xFF15709C)
++    val azureDark = Color(0xFF4FB4DC)  // brighter for dark bg
++    val azureContainer = Color(0xFFD4EEF8)
++    val azureContainerDark = Color(0xFF0E2A38)
++    val azureNonOpaque = Color(0x221B86B8)     // ~13 % azure
++    val azureDarkNonOpaque = Color(0x524FB4DC) // ~32 % azure dark
++
++    // Scrim
++    val scrim = Color(0xC7140C08)
+ }
+ 
++
++// ── Faro Design System — Mediterranean palette ───────────────────────────────
++// Light: warm sand (#FBF7F0) · ink (#261F18) · Azure Coast (#1B86B8)
++// Dark:  Mediterranean night (#131110) · warm cream (#F4EDE2) · azure (#4FB4DC)
++private object FaroColors {
++    // Neutrals — light
++    val sand50  = Color(0xFFFBF7F0)
++    val sand100 = Color(0xFFF5EEE2)
++    val sand200 = Color(0xFFEBE0CF)
++    val sand300 = Color(0xFFDCCDB6)
++    val stone400 = Color(0xFFB6A892)
++    val stone500 = Color(0xFF8B7E6C)
++    val stone600 = Color(0xFF6B6052)
++    val ink800  = Color(0xFF3A332B)
++    val ink900  = Color(0xFF261F18)
++
++    // Neutrals — dark (Mediterranean night)
++    val darkBg           = Color(0xFF131110)
++    val darkSurface      = Color(0xFF1A1714)
++    val darkSurfaceHigh  = Color(0xFF222018)
++    val darkSurfaceHighest = Color(0xFF2A2520)
++    val darkText         = Color(0xFFF4EDE2)
++    val darkTextSoft     = Color(0xFFC3B6A4)
++    val darkTextFaint    = Color(0xFF9A8E7E)
++
++    // Azure Coast accent
++    val azure300 = Color(0xFF7FC9E3)
++    val azure500 = Color(0xFF1B86B8)
++    val azure600 = Color(0xFF15709C)
++    val azureDark = Color(0xFF4FB4DC)
++    val azureContainer = Color(0xFFD4EEF8)
++    val azureContainerDark = Color(0xFF0E2A38)
++    val azureNonOpaque = Color(0x221B86B8)
++    val azureDarkNonOpaque = Color(0x524FB4DC)
++
++    // Scrim
++    val scrim = Color(0xC7140C08)
++}
++
+ val darkColorPalette = AcornColors(
+-    layer2 = PhotonColors.DarkGrey30,
+-    layer3 = PhotonColors.DarkGrey80,
+-    layerAccent = PhotonColors.Violet40,
+-    layerAccentNonOpaque = PhotonColors.Violet50A32,
+-    layerGradientStart = PhotonColors.Violet70,
+-    layerGradientEnd = PhotonColors.Violet60,
++    layer2 = FaroColors.darkSurfaceHigh,
++    layer3 = FaroColors.darkBg,
++    layerAccent = FaroColors.azureDark,
++    layerAccentNonOpaque = FaroColors.azureDarkNonOpaque,
++    layerGradientStart = FaroColors.azureDark,
++    layerGradientEnd = FaroColors.azure600,
+     layerWarning = PhotonColors.Yellow70A77,
+     layerCritical = PhotonColors.Pink80,
+-    layerInformation = PhotonColors.Blue50,
++    layerInformation = FaroColors.azureDark,
+     actionWarning = PhotonColors.Yellow40A41,
+     actionCritical = PhotonColors.Pink70A69,
+-    actionInformation = PhotonColors.Blue60,
+-    formDefault = PhotonColors.LightGrey05,
+-    textOnColorPrimary = PhotonColors.LightGrey05,
+-    iconPrimaryInactive = PhotonColors.LightGrey05A60,
+-    iconOnColor = PhotonColors.LightGrey05,
+-    ripple = PhotonColors.White,
+-    tabActive = PhotonColors.DarkGrey30,
+-    tabInactive = PhotonColors.DarkGrey80,
+-    information = PhotonColors.Blue30,
+-    informationContainer = PhotonColors.Blue50,
+-    onInformationContainer = PhotonColors.LightGrey05,
++    actionInformation = FaroColors.azure600,
++    formDefault = FaroColors.darkText,
++    textOnColorPrimary = FaroColors.darkText,
++    iconPrimaryInactive = Color(0x99F4EDE2),
++    iconOnColor = FaroColors.darkBg,
++    ripple = FaroColors.darkText,
++    tabActive = FaroColors.darkSurface,
++    tabInactive = FaroColors.darkBg,
++    information = FaroColors.azure300,
++    informationContainer = FaroColors.azureContainerDark,
++    onInformationContainer = FaroColors.darkText,
+     success = PhotonColors.Green50,
+     warning = PhotonColors.Yellow50,
+     warningContainer = PhotonColors.Yellow70A77,
+-    onWarningContainer = PhotonColors.LightGrey05,
+-    surfaceDimVariant = PhotonColors.DarkGrey80,
++    onWarningContainer = FaroColors.darkText,
++    surfaceDimVariant = FaroColors.darkBg,
++),
++    iconOnColor = FaroColors.darkBg,
++    ripple = FaroColors.darkText,
++    tabActive = FaroColors.darkSurface,
++    tabInactive = FaroColors.darkBg,
++    information = FaroColors.azure300,
++    informationContainer = FaroColors.azureContainerDark,
++    onInformationContainer = FaroColors.darkText,
++    success = PhotonColors.Green50,
++    warning = PhotonColors.Yellow50,
++    warningContainer = PhotonColors.Yellow70A77,
++    onWarningContainer = FaroColors.darkText,
++    surfaceDimVariant = FaroColors.darkBg,
+ )
+ 
+ val lightColorPalette = AcornColors(
+-    layer2 = PhotonColors.White,
+-    layer3 = PhotonColors.LightGrey20,
+-    layerAccent = PhotonColors.Ink20,
+-    layerAccentNonOpaque = PhotonColors.Violet70A12,
+-    layerGradientStart = PhotonColors.Violet70,
+-    layerGradientEnd = PhotonColors.Violet60,
++    layer2 = FaroColors.sand100,
++    layer3 = FaroColors.sand200,
++    layerAccent = FaroColors.azure500,
++    layerAccentNonOpaque = FaroColors.azureNonOpaque,
++    layerGradientStart = FaroColors.azure500,
++    layerGradientEnd = FaroColors.azure600,
+     layerWarning = PhotonColors.Yellow20,
+     layerCritical = PhotonColors.Red10,
+-    layerInformation = PhotonColors.Blue50A44,
++    layerInformation = FaroColors.azure500,
+     actionWarning = PhotonColors.Yellow60A40,
+     actionCritical = PhotonColors.Red30,
+-    actionInformation = PhotonColors.Blue50,
+-    formDefault = PhotonColors.DarkGrey90,
+-    textOnColorPrimary = PhotonColors.LightGrey05,
+-    iconPrimaryInactive = PhotonColors.DarkGrey90A60,
+-    iconOnColor = PhotonColors.LightGrey05,
+-    ripple = PhotonColors.Black,
+-    tabActive = PhotonColors.LightGrey10,
+-    tabInactive = PhotonColors.LightGrey20,
+-    information = PhotonColors.Blue60,
+-    informationContainer = PhotonColors.Blue50A44,
+-    onInformationContainer = PhotonColors.DarkGrey90,
++    actionInformation = FaroColors.azure500,
++    formDefault = FaroColors.ink900,
++    textOnColorPrimary = Color(0xFFFFFFFF),
++    iconPrimaryInactive = Color(0x99261F18),
++    iconOnColor = Color(0xFFFFFFFF),
++    ripple = FaroColors.ink900,
++    tabActive = FaroColors.sand50,
++    tabInactive = FaroColors.sand100,
++    information = FaroColors.azure600,
++    informationContainer = FaroColors.azureContainer,
++    onInformationContainer = FaroColors.ink900,
+     success = PhotonColors.Green80,
+     warning = PhotonColors.Yellow80,
+     warningContainer = PhotonColors.Yellow20,
+-    onWarningContainer = PhotonColors.DarkGrey90,
+-    surfaceDimVariant = PhotonColors.LightGrey20,
++    onWarningContainer = FaroColors.ink900,
++    surfaceDimVariant = FaroColors.sand200,
++),
++    iconPrimaryInactive = Color(0x99261F18),
++    iconOnColor = Color(0xFFFFFFFF),
++    ripple = FaroColors.ink900,
++    tabActive = FaroColors.sand50,
++    tabInactive = FaroColors.sand100,
++    information = FaroColors.azure600,
++    informationContainer = FaroColors.azureContainer,
++    onInformationContainer = FaroColors.ink900,
++    success = PhotonColors.Green80,
++    warning = PhotonColors.Yellow80,
++    warningContainer = PhotonColors.Yellow20,
++    onWarningContainer = FaroColors.ink900,
++    surfaceDimVariant = FaroColors.sand200,
+ )
+ 
+ val privateColorPalette = darkColorPalette.copy(
+@@ -431,63 +535,93 @@
+ )
+ 
+ /**
+- * Returns a dark Material color scheme mapped from Acorn.
++ * Returns a dark Material color scheme — Faro Mediterranean night.
+  */
+ fun acornDarkColorScheme(): ColorScheme = buildColorScheme(
+-    primary = PhotonColors.Violet10,
+-    primaryContainer = PhotonColors.Violet80,
+-    inversePrimary = PhotonColors.Violet70,
+-    secondary = PhotonColors.LightGrey40,
+-    secondaryContainer = Color(0xFF4B3974),
+-    tertiary = PhotonColors.Violet20,
+-    tertiaryContainer = PhotonColors.Pink80,
+-    surface = PhotonColors.DarkGrey60,
+-    onSurface = PhotonColors.LightGrey05,
+-    surfaceTint = PhotonColors.LightGrey05A34,
+-    inverseSurface = PhotonColors.LightGrey40,
+-    inverseOnSurface = PhotonColors.DarkGrey90,
++    primary = FaroColors.azureDark,
++    primaryContainer = FaroColors.azureContainerDark,
++    inversePrimary = FaroColors.azure500,
++    secondary = FaroColors.darkTextSoft,
++    secondaryContainer = FaroColors.darkSurfaceHighest,
++    tertiary = FaroColors.azure300,
++    tertiaryContainer = FaroColors.azureContainerDark,
++    surface = FaroColors.darkBg,
++    onSurface = FaroColors.darkText,
++    surfaceTint = Color(0x57C3B6A4),
++    inverseSurface = FaroColors.sand100,
++    inverseOnSurface = FaroColors.darkSurface,
+     error = PhotonColors.Red20,
+     errorContainer = PhotonColors.Red80,
+-    outline = PhotonColors.LightGrey80,
+-    outlineVariant = PhotonColors.DarkGrey05,
+-    scrim = PhotonColors.DarkGrey90A95,
+-    surfaceBright = PhotonColors.DarkGrey40,
+-    surfaceDim = PhotonColors.DarkGrey80,
+-    surfaceContainer = PhotonColors.DarkGrey60,
+-    surfaceContainerHigh = PhotonColors.DarkGrey50,
+-    surfaceContainerHighest = PhotonColors.DarkGrey40,
+-    surfaceContainerLow = PhotonColors.DarkGrey70,
+-    surfaceContainerLowest = PhotonColors.DarkGrey80,
++    outline = FaroColors.darkTextFaint,
++    outlineVariant = FaroColors.darkSurfaceHighest,
++    scrim = FaroColors.scrim,
++    surfaceBright = FaroColors.darkSurfaceHighest,
++    surfaceDim = FaroColors.darkBg,
++    surfaceContainer = FaroColors.darkSurface,
++    surfaceContainerHigh = FaroColors.darkSurfaceHigh,
++    surfaceContainerHighest = FaroColors.darkSurfaceHighest,
++    surfaceContainerLow = FaroColors.darkBg,
++    surfaceContainerLowest = FaroColors.darkBg,
++),
++    inverseSurface = FaroColors.sand100,
++    inverseOnSurface = FaroColors.darkSurface,
++    error = PhotonColors.Red20,
++    errorContainer = PhotonColors.Red80,
++    outline = FaroColors.darkTextFaint,
++    outlineVariant = FaroColors.darkSurfaceHighest,
++    scrim = FaroColors.scrim,
++    surfaceBright = FaroColors.darkSurfaceHighest,
++    surfaceDim = FaroColors.darkBg,
++    surfaceContainer = FaroColors.darkSurface,
++    surfaceContainerHigh = FaroColors.darkSurfaceHigh,
++    surfaceContainerHighest = FaroColors.darkSurfaceHighest,
++    surfaceContainerLow = FaroColors.darkBg,
++    surfaceContainerLowest = FaroColors.darkBg,
+ )
+ 
+ /**
+- * Returns a light Material color scheme mapped from Acorn.
++ * Returns a light Material color scheme — Faro Azure Coast.
+  */
+ fun acornLightColorScheme(): ColorScheme = buildColorScheme(
+-    primary = PhotonColors.Ink20,
+-    primaryContainer = PhotonColors.Violet05,
+-    inversePrimary = PhotonColors.Violet20,
+-    secondary = PhotonColors.DarkGrey05,
+-    secondaryContainer = Color(0xFFE6E0F5),
+-    tertiary = PhotonColors.Violet70,
+-    tertiaryContainer = PhotonColors.Pink05,
+-    surface = PhotonColors.LightGrey10,
+-    onSurface = PhotonColors.DarkGrey90,
+-    surfaceTint = PhotonColors.DarkGrey05A43,
+-    inverseSurface = PhotonColors.DarkGrey60,
+-    inverseOnSurface = PhotonColors.LightGrey05,
++    primary = FaroColors.azure500,
++    primaryContainer = FaroColors.azureContainer,
++    inversePrimary = FaroColors.azureDark,
++    secondary = FaroColors.stone600,
++    secondaryContainer = FaroColors.sand200,
++    tertiary = FaroColors.azure600,
++    tertiaryContainer = FaroColors.azureContainer,
++    surface = FaroColors.sand50,
++    onSurface = FaroColors.ink900,
++    surfaceTint = Color(0x6E6B6052),
++    inverseSurface = FaroColors.ink800,
++    inverseOnSurface = FaroColors.sand50,
+     error = PhotonColors.Red70,
+     errorContainer = PhotonColors.Red10,
+-    outline = PhotonColors.LightGrey90,
+-    outlineVariant = PhotonColors.LightGrey30,
+-    scrim = PhotonColors.DarkGrey30A95,
+-    surfaceBright = PhotonColors.White,
+-    surfaceDim = PhotonColors.LightGrey30,
+-    surfaceContainer = PhotonColors.LightGrey10,
+-    surfaceContainerHigh = PhotonColors.LightGrey20,
+-    surfaceContainerHighest = PhotonColors.LightGrey30,
+-    surfaceContainerLow = PhotonColors.LightGrey05,
+-    surfaceContainerLowest = PhotonColors.White,
++    outline = FaroColors.stone400,
++    outlineVariant = FaroColors.sand300,
++    scrim = FaroColors.scrim,
++    surfaceBright = FaroColors.sand50,
++    surfaceDim = FaroColors.sand200,
++    surfaceContainer = FaroColors.sand100,
++    surfaceContainerHigh = FaroColors.sand200,
++    surfaceContainerHighest = FaroColors.sand300,
++    surfaceContainerLow = FaroColors.sand100,
++    surfaceContainerLowest = FaroColors.sand50,
++),
++    inverseSurface = FaroColors.ink800,
++    inverseOnSurface = FaroColors.sand50,
++    error = PhotonColors.Red70,
++    errorContainer = PhotonColors.Red10,
++    outline = FaroColors.stone400,
++    outlineVariant = FaroColors.sand300,
++    scrim = FaroColors.scrim,
++    surfaceBright = FaroColors.sand50,
++    surfaceDim = FaroColors.sand200,
++    surfaceContainer = FaroColors.sand100,
++    surfaceContainerHigh = FaroColors.sand200,
++    surfaceContainerHighest = FaroColors.sand300,
++    surfaceContainerLow = FaroColors.sand100,
++    surfaceContainerLowest = FaroColors.sand50,
+ )
+ 
+ /**
